@@ -121,5 +121,54 @@ RSpec.describe "User Mood", type: :request do
       expect(mood_response[:errors]).to be_a(Array)
       expect(mood_response[:errors].first[:detail]).to eq("Validation failed: User can't be blank, User is not a number")
     end
+
+    it 'will throw an error if mood is not passed' do
+      moods = Mood.all
+      expect(moods.count).to eq 0
+
+      mood_params = {
+        user_id: 1
+      }
+
+      headers = { 'Content-Type' => 'application/json' }
+
+      post "/api/v1/moods", headers: headers, params: JSON.generate(mood_params)
+
+      new_mood = Mood.last
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq 400
+
+      mood_response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(mood_response).to be_a(Hash)
+      expect(mood_response[:errors]).to be_a(Array)
+      expect(mood_response[:errors].first[:detail]).to eq("Validation failed: Mood can't be blank, Mood is not a number")
+    end
+
+    it 'will throw an error if mood is not passed' do
+      moods = Mood.all
+      expect(moods.count).to eq 0
+
+      mood_params = {
+        mood: 'mood',
+        user_id: 1
+      }
+
+      headers = { 'Content-Type' => 'application/json' }
+
+      post "/api/v1/moods", headers: headers, params: JSON.generate(mood_params)
+
+      new_mood = Mood.last
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq 400
+
+      mood_response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(mood_response).to be_a(Hash)
+      expect(mood_response[:errors]).to be_a(Array)
+      expect(mood_response[:errors].first[:detail]).to eq("Validation failed: Mood is not a number")
+    end
   end
 end

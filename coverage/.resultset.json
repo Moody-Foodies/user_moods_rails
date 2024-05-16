@@ -1,69 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/models/mood.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/spec/requests/api/v1/user_moods_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/controllers/api/v1/moods_controller.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
           null,
           null,
           1,
           null,
-          null,
-          null,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -74,21 +36,16 @@
           null
         ]
       },
-      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/serializers/mood_serializer.rb": {
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/serializers/error_serializer.rb": {
         "lines": [
+          1,
+          1,
+          1,
           null,
           null,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null,
           null,
@@ -97,8 +54,20 @@
           null,
           null
         ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/poros/error_object.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1715894173
+    "timestamp": 1715895353
   }
 }

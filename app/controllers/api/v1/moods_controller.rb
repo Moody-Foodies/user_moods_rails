@@ -13,6 +13,16 @@ class Api::V1::MoodsController < ApplicationController
     render json: MoodSerializer.new(mood_summary).serialize
   end
 
+  def create
+    begin
+      mood = Mood.create!(mood_params)
+      head :created
+    rescue => e
+      render json: ErrorSerializer.new(ErrorObject.new(e.message, 400))
+        .serialize_json, status: :bad_request
+    end
+  end
+
   private
 
   def get_user_id
@@ -22,5 +32,9 @@ class Api::V1::MoodsController < ApplicationController
       render json: ErrorSerializer.new(ErrorObject.new(message, 400))
         .serialize_json, status: :bad_request
     end
+  end
+
+  def mood_params
+    params.permit(:user_id, :mood)
   end
 end

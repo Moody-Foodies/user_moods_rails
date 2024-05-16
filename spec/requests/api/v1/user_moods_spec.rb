@@ -72,4 +72,27 @@ RSpec.describe "User Mood", type: :request do
       expect(mood_response[:errors].first[:detail]).to eq("User ID not provided in request query. Please include a user_id")
     end
   end
+
+  describe "POST /api/v1/moods" do
+    it 'Create a new mood for a user' do
+      mood_params = {
+        user_id: 1,
+        mood: 3,
+        date: "2024-05-01"
+      }
+      headers = { 'Content-Type' => 'application/json' }
+
+      post "api/v1/moods", headers: headers, params: JSON.generate(mood_params)
+
+      new_mood = Mood.last
+
+      expect(response).to be_successful
+      expect(response.status).to eq 200
+
+      post_response = JSON.parse(response.body, symbolize_names: true)
+      require 'pry' ; binding.pry
+
+
+    end
+  end
 end

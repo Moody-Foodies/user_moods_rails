@@ -15,9 +15,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_16_192043) do
   enable_extension "plpgsql"
 
   create_table "moods", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "mood"
-    t.datetime "date"
+    t.integer "user_id", null: false
+    t.integer "mood", null: false
+    t.datetime "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

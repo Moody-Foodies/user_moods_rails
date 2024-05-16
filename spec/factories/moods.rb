@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :mood do
     user_id { 1 }
-    mood { 1 }
-    date { "2024-05-16 15:20:43" }
+    mood { Faker::Number.within(range: 1..5) }
+    date { Faker::Date.between(from: '2024-01-01', to: '2024-05-16') }
   end
 end

@@ -7,6 +7,14 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -31,7 +39,7 @@
           null,
           1,
           null,
-          1,
+          0,
           0,
           null,
           0,
@@ -41,8 +49,56 @@
           null,
           null
         ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/controllers/api/v1/moods_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/serializers/mood_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1715888676
+    "timestamp": 1715894173
   }
 }

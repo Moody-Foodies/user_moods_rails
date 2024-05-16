@@ -31,6 +31,36 @@
           null
         ]
       },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/spec/poros/error_object_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/poros/error_object.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null
+        ]
+      },
       "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/spec/requests/api/v1/user_moods_spec.rb": {
         "lines": [
           1,
@@ -301,20 +331,8 @@
           null,
           null
         ]
-      },
-      "/Users/igormagalhaes/Desktop/turing/4mod/projects/user_mood/app/poros/error_object.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1715897721
+    "timestamp": 1715897794
   }
 }

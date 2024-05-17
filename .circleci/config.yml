@@ -1,41 +1,35 @@
-# This config was automatically generated from your source code
-# Stacks detected: deps:ruby:.
 version: 2.1
+
 orbs:
-  ruby: circleci/ruby@2.0.1
+  ruby: circleci/ruby@2.1.2
+
 jobs:
-  test-ruby:
-    # Install gems, run rspec tests
+  build:
     docker:
-      - image: cimg/ruby:3.1.4-node
-      - image: circleci/postgres:9.5-alpine
+      - image: cimg/ruby:3.2.2
+      - environment:
+          POSTGRES_DB: user_mood_test
+          POSTGRES_USER: postgres
+        image: circleci/postgres:9.5-alpine
     environment:
+      PGHOST: 127.0.0.1
+      PGPASSWORD: ''
+      PGUSER: postgres
       RAILS_ENV: test
     steps:
       - checkout
-      - ruby/install-deps
+      - ruby/install-deps  # Uses the ruby orb to install dependencies
       - run:
-          name: wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
+          name: Wait for DB
       - run:
+          command: bundle exec rails db:schema:load --trace
           name: Database setup
-          command: bundle exec rake db:test:prepare
-      - run:
-          name: rspec test
-          command: bundle exec rspec
-  deploy:
-    # This is an example deploy job, not actually used by the workflow
-    docker:
-      - image: cimg/base:stable
-    steps:
-      # Replace this with steps to deploy to users
-      - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
+      - ruby/rspec-test:
+          include: spec/**/*_spec.rb
+
 workflows:
-  build-and-test:
+  version: 2
+  run_tests:
     jobs:
-      - test-ruby
-    # - deploy:
-    #     requires:
-    #       - test-ruby
+      - build

@@ -14,13 +14,8 @@ class Api::V1::MoodsController < ApplicationController
   end
 
   def create
-    begin
-      mood = Mood.create!(mood_params)
-      head :created
-    rescue => e
-      render json: ErrorSerializer.new(ErrorObject.new(e.message, 400))
-        .serialize_json, status: :bad_request
-    end
+    mood = Mood.create!(mood_params)
+    head :created
   end
 
   private

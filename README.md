@@ -1,3 +1,6 @@
+## User Mood Service
+- User Mood Service API serves as a service to Brain Food Organization. This service saves user's mood information once they make a request for the recipe service. This mood is saved and then shown to the user to serve as a tracker for their mood information.
+
 ## Setup
 
 ### Prerequisites
@@ -130,6 +133,8 @@ response:
     }
     ```
 
+## Production Site: 
+[Brain Food Gatewat](https://user-moods-rails.onrender.com/)
 
 ## Testing
 This project includes automated tests written with RSpec. To run the tests, execute the following command:
@@ -137,6 +142,18 @@ This project includes automated tests written with RSpec. To run the tests, exec
 ```bash
 bundle exec rspec
 ```
+
+## Contributors
+- Erin Kelley
+    - [LinkedIn](https://www.linkedin.com/in/kelleyej/) | [GitHub](https://github.com/kelleyej)
+- Faisal Nazari
+    - [LinkedIn](https://www.linkedin.com/in/mfaisalnazari/) | [GitHub](https://github.com/mfaisalnazari)
+- Igor Magalhaes
+    - [LinkedIn](https://www.linkedin.com/in/igorrmagalhaess/) | [GitHub](https://github.com/IgorrMagalhaess) 
+- Jack Sweeney
+    - [LinkedIn](https://www.linkedin.com/in/jack-sweeney-024043274/) | [GitHub](https://github.com/JackCSweeney)
+- Laura Long
+    - [LinkedIn](https://www.linkedin.com/in/lauralonggone/) | [GitHub](https://github.com/lalonggone)
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or pull requests.
